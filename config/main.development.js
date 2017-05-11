@@ -9,9 +9,7 @@ module.exports = makeConfig({
   // vhost配置
   vhost: {
     '127.0.0.1': 'iblog',
-    'localhost': 'blog',
-    'feclub.cn': 'blog',
-    'yuwn': 'iblog'
+    'localhost': 'iblog'
   },
 
   // router配置
@@ -45,6 +43,11 @@ module.exports = makeConfig({
     hostname: 'localhost'
   },
 
+  httpsSite: {
+    env: 'development',
+    port: 443,
+    hostname: 'localhost'
+  },
   // 通用参数，以模板参数的形式传递给模板引擎
   constant: {
     cdn: '',

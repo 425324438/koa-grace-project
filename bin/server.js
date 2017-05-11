@@ -13,4 +13,8 @@ const utils = require('../src/utils');
 const args = utils.parseArg();
 const config = global.config = require('../src/config')(args);
 
-require('../src/app').listen(config.site.port);
+
+console.info('https 端口：'+config.httpsSite.port);
+
+var app = require('../src/app');
+app.listen(config.site.port);
